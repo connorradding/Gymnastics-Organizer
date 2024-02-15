@@ -1,0 +1,17 @@
+<h1>Gymnastics Competition Organizer</h1>
+    <section id="create-competition">
+        <h2>Create a New Competition</h2>
+        <div id="competition-form">
+            <input type="text" id="competition-name" placeholder="Competition Name" required>
+            <button id="submit" type="submit">Create Competition</button>
+        </div>
+    </section>
+    <section id="competitions-list">
+        <h2>Competitions</h2>
+        <ul id="competitions">
+            {{#each comp}}
+                {{> competitions}}
+            {{/each}}
+        </ul>
+    </section>
+    <script src="index.js"></script>
