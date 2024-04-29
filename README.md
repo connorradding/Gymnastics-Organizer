@@ -19,3 +19,5 @@ Technologies Used
 -Handlebars: Templating engine used to generate dynamic HTML content.<br />
 -CSS: For styling and responsive design.<br />
 -JavaScript: For client-side scripting and interaction.<br />
+
+To start website type "npm start"<br />
