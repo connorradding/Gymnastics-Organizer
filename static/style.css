@@ -50,7 +50,6 @@ ul {
 
 li {
   padding: 10px;
-  border-bottom: 1px solid #ddd;
 }
 
 .Competitions {
@@ -78,6 +77,38 @@ li {
   font-weight: bold; /* Make the competition name bold */
 }
 
+.content-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.events-list,
+.levels-list {
+  flex-basis: 48%; /* Adjust the width of each list */
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#event-item {
+  color: black
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+li:last-child {
+  border-bottom: none;
+}
 
 .back-button {
   position: fixed;
@@ -92,4 +123,91 @@ li {
 }
 .back-button:hover {
   background-color: #0056b3;
+}
+
+.score-input {
+  margin: 10px;
+  padding: 2px 5px; /* Smaller padding */
+  max-width: 60px; /* Adjusted width to make the input smaller */
+  display: inline-block; /* Ensure it displays inline */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px; /* Smaller font size for the input */
+}
+
+.submit-score {
+  max-width: 60px;
+  padding: 2px 5px; /* Smaller padding for the button */
+  margin-left: 5px; /* Space between the input and the button */
+  font-size: 14px; /* Smaller text in the button */
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block; /* Ensure it displays inline */
+}
+
+.submit-score:hover {
+  background-color: #0056b3;
+}
+
+li {
+  padding: 10px;
+  display: flex; /* Use flexbox to align items */
+  align-items: center; /* Align items vertically */
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px; /* Could be more or less, depending on screen size */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.button {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #007bff; /* Primary button color */
+  color: white; /* Text color */
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px; /* Text size */
+  cursor: pointer; /* Mouse cursor */
+  transition: background-color 0.3s ease; /* Smooth background color transition */
 }

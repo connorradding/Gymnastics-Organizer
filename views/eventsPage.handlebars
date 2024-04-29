@@ -1,0 +1,16 @@
+<h1 id="identify" data-id="{{compID}}" data-event-name="{{eventName}}">{{compName}} - {{eventName}}</h1>
+{{#each levels}}
+  <h2>{{levelName}}</h2>
+  <ul>
+    {{#each gymnasts}}
+      <li>
+        {{gymnastName}}
+        <input type="number" class="score-input" placeholder="Score" data-gymnast-name="{{gymnastName}}" data-level-name="{{../levelName}}">
+        <!-- Visible submit button -->
+        <button class="submit-score">Submit</button>
+      </li>
+    {{/each}}
+  </ul>
+{{/each}}
+
+<a href="/competition-page/{{compID}}" class="back-button">Go Back</a>

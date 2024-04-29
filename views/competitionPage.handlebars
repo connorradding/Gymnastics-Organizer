@@ -1,9 +1,85 @@
 <h1>{{comp.name}}</h1>
-<h2>Events:</h2>
-<ul>
-    {{#each comp.events}}
-        {{> events}}
-    {{/each}}
-</ul>
+<div class="content-container">
+    <div class="events-list">
+        <h2>Scoring:</h2>
+        <ul>
+            {{#each comp.events}}
+                <li><a id="event-item" href="/events-page/{{../comp.id}}/{{this}}">{{this}}</a></li>
+            {{/each}}
+        </ul>
+    </div>
+    <div class="levels-list">
+        <h2>Gymnasts:</h2>
+        <ul>
+            {{#each comp.levels}}
+                <li>{{this.levelName}}:</li>
+                {{#each this.gymnasts}}
+                    <li>{{this.gymnastName}}</li>
+                {{/each}}
+            {{/each}}
+        </ul>
+    </div>
+</div>
+
+<button id="eventBtn" >Add Event</button>
+<button id="levelBtn" >Add Level</button>
+<button id="gymnastBtn" >Add Gymnast</button>
+
+<a id="resultsBtn" class="Btn" href="/results-page/{{comp.id}}">results page</a>
+
+<!-- Event Modal -->
+<div id="eventModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Add Event</h2>
+    <form id="eventForm">
+      <input type="text" id="eventName" name="eventName" placeholder="Event Name" required>
+      <input type="submit" data-compid="{{comp.id}}" id="submitEvent" value="Add Event">
+    </form>
+  </div>
+</div>
+
+<!-- Level Modal -->
+<div id="levelModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Add Level</h2>
+    <form id="levelForm">
+      <input type="text" id="levelName" name="levelName" placeholder="Level Name" required>
+      <input type="submit" data-compid="{{comp.id}}" id="submitLevel" value="Add Level">
+    </form>
+  </div>
+</div>
+
+<!-- Gymnast Modal -->
+<div id="gymnastModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Add Gymnast</h2>
+    <form id="gymnastForm">
+      <input type="text" id="gymnastName" name="gymnastName" placeholder="Gymnast Name" required>
+      
+      <!-- Level Select -->
+      <label for="gymnastLevel">Level:</label>
+      <select id="gymnastLevel" name="gymnastLevel" required>
+        <option value="">Select Level</option>
+        {{#each comp.levels}}
+        <option value="{{this.levelName}}">{{this.levelName}}</option>
+        {{/each}}
+      </select>
+      
+      <!-- Events Select -->
+      <label for="gymnastEvent">Events:</label>
+      <select id="gymnastEvent" name="gymnastEvent" required multiple>
+        <option value="">Select Events (Ctrl+Click for multiple)</option>
+        {{#each comp.events}}
+        <option value="{{this}}">{{this}}</option>
+        {{/each}}
+      </select>
+      
+      <input type="submit" data-compid="{{comp.id}}" id="submitGymnast" value="Add Gymnast">
+    </form>
+  </div>
+</div>
 
 <a href="/" class="back-button">Go Back</a>

@@ -3,6 +3,124 @@
     "id": 0,
     "name": "Gym jam",
     "code": 30784,
-    "events": ["Pommel Horse", "High Bar", "Parallel Bars"]
+    "events": [
+      "Pommel Horse",
+      "High Bar",
+      "Parallel Bars",
+      "Beam",
+      "uneven bars"
+    ],
+    "levels": [
+      {
+        "levelName": "level 5",
+        "gymnasts": [
+          {
+            "gymnastName": "Connor Radding",
+            "competingEvents": [
+              {
+                "eventName": "Pommel Horse",
+                "score": "12"
+              },
+              {
+                "eventName": "High Bar",
+                "score": "12.70"
+              }
+            ]
+          },
+          {
+            "gymnastName": "Abbi DeRosier",
+            "competingEvents": [
+              {
+                "eventName": "Beam",
+                "score": "10.00"
+              },
+              {
+                "eventName": "Floor",
+                "score": "9.90"
+              }
+            ]
+          },
+          {
+            "gymnastName": "cool guy",
+            "competingEvents": [
+              {
+                "eventName": "Pommel Horse",
+                "score": "15"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "levelName": "level 6",
+        "gymnasts": [
+          {
+            "gymnastName": "William Radding",
+            "competingEvents": [
+              {
+                "eventName": "High bar",
+                "score": "13.10"
+              },
+              {
+                "eventName": "Pommel Horse",
+                "score": "15"
+              }
+            ]
+          },
+          {
+            "gymnastName": "Regan Singer",
+            "competingEvents": [
+              {
+                "eventName": "Beam",
+                "score": "9.50"
+              },
+              {
+                "eventName": "Floor",
+                "score": "9.80"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "levelName": "level 10",
+        "gymnasts": [
+          {
+            "gymnastName": "Hello Bob",
+            "competingEvents": [
+              {
+                "eventName": "Pommel Horse",
+                "score": "12"
+              },
+              {
+                "eventName": "High Bar",
+                "score": null
+              },
+              {
+                "eventName": "Parallel Bars",
+                "score": null
+              }
+            ]
+          },
+          {
+            "gymnastName": "cool guy",
+            "competingEvents": [
+              {
+                "eventName": "Pommel Horse",
+                "score": null
+              },
+              {
+                "eventName": "High Bar",
+                "score": null
+              },
+              {
+                "eventName": "Parallel Bars",
+                "score": null
+              }
+            ]
+          }
+        ]
+      }
+    ]
   }
 ]

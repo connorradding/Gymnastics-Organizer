@@ -1,0 +1,15 @@
+<h1>Results for {{compName}}</h1>
+
+{{#each levels}}
+    <h2>{{levelName}}</h2>
+    {{#each events}}
+        <h3>{{eventName}}</h3>
+        <ol>
+            {{#each gymnasts}}
+                <li>{{gymnastName}} - Score: {{score}}</li>
+            {{/each}}
+        </ol>
+    {{/each}}
+{{/each}}
+
+<a href="/competition-page/{{compID}}" class="back-button">Go Back</a>

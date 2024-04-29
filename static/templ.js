@@ -14,9 +14,4 @@ templates['competitions'] = template({"compiler":[8,">= 4.3.0"],"main":function(
     + alias4(((helper = (helper = lookupProperty(helpers,"name") || (depth0 != null ? lookupProperty(depth0,"name") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"name","hash":{},"data":data,"loc":{"start":{"line":2,"column":34},"end":{"line":2,"column":42}}}) : helper)))
     + "</div>\r\n</a>";
 },"useData":true});
-templates['events'] = template({"compiler":[8,">= 4.3.0"],"main":function(container,depth0,helpers,partials,data) {
-    return "<li>"
-    + container.escapeExpression(container.lambda(depth0, depth0))
-    + "</li>";
-},"useData":true});
 })();
